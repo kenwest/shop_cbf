@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Shop CBF feature.
+ */
+
+include_once 'shop_cbf.features.inc';

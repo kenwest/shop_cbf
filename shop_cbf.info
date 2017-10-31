@@ -1,0 +1,14 @@
+name = Shop CBF
+description = Implements the CBF shop - builds on Drupal Commerce, Views, etc
+core = 7.x
+package = Features
+version = 7.x-1.0-dev20171031
+dependencies[] = fe_block
+dependencies[] = views
+dependencies[] = views_bootstrap
+features[ctools][] = views:views_default:3.0
+features[fe_block_settings][] = views-shop_cbf_node_to_product-block
+features[features_api][] = api:2
+features[views_view][] = shop_cbf_node_to_product
+features[views_view][] = shop_cbf_product
+features_exclude[dependencies][ctools] = ctools
