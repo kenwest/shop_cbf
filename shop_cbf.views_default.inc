@@ -184,13 +184,12 @@ function shop_cbf_views_default_views() {
     'image_style' => 'content',
     'image_link' => '',
   );
-  /* Field: Long description */
-  $handler->display->display_options['fields']['field_sidebar_content']['id'] = 'field_sidebar_content';
-  $handler->display->display_options['fields']['field_sidebar_content']['table'] = 'field_data_field_sidebar_content';
-  $handler->display->display_options['fields']['field_sidebar_content']['field'] = 'field_sidebar_content';
-  $handler->display->display_options['fields']['field_sidebar_content']['ui_name'] = 'Long description';
-  $handler->display->display_options['fields']['field_sidebar_content']['label'] = '';
-  $handler->display->display_options['fields']['field_sidebar_content']['element_label_colon'] = FALSE;
+  /* Field: Commerce Product: Long description */
+  $handler->display->display_options['fields']['field_long_description']['id'] = 'field_long_description';
+  $handler->display->display_options['fields']['field_long_description']['table'] = 'field_data_field_long_description';
+  $handler->display->display_options['fields']['field_long_description']['field'] = 'field_long_description';
+  $handler->display->display_options['fields']['field_long_description']['label'] = '';
+  $handler->display->display_options['fields']['field_long_description']['element_label_colon'] = FALSE;
   /* Field: Download(s) */
   $handler->display->display_options['fields']['field_attachment']['id'] = 'field_attachment';
   $handler->display->display_options['fields']['field_attachment']['table'] = 'field_data_field_attachment';
