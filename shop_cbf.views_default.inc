@@ -86,6 +86,19 @@ function shop_cbf_views_default_views() {
   $handler->display->display_options['fields']['field_short_form']['ui_name'] = 'Short description';
   $handler->display->display_options['fields']['field_short_form']['label'] = '';
   $handler->display->display_options['fields']['field_short_form']['element_label_colon'] = FALSE;
+  /* Field: Commerce Product: Price */
+  $handler->display->display_options['fields']['commerce_price']['id'] = 'commerce_price';
+  $handler->display->display_options['fields']['commerce_price']['table'] = 'field_data_commerce_price';
+  $handler->display->display_options['fields']['commerce_price']['field'] = 'commerce_price';
+  $handler->display->display_options['fields']['commerce_price']['label'] = '';
+  $handler->display->display_options['fields']['commerce_price']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['commerce_price']['empty'] = 'Free';
+  $handler->display->display_options['fields']['commerce_price']['hide_empty'] = TRUE;
+  $handler->display->display_options['fields']['commerce_price']['empty_zero'] = TRUE;
+  $handler->display->display_options['fields']['commerce_price']['click_sort_column'] = 'amount';
+  $handler->display->display_options['fields']['commerce_price']['settings'] = array(
+    'calculation' => 'calculated_sell_price',
+  );
   /* Field: Commerce Product: Add to Cart form */
   $handler->display->display_options['fields']['add_to_cart_form']['id'] = 'add_to_cart_form';
   $handler->display->display_options['fields']['add_to_cart_form']['table'] = 'views_entity_commerce_product';
@@ -132,6 +145,7 @@ function shop_cbf_views_default_views() {
     t('Desc'),
     t('Node referencing products from field_products'),
     t('Click for details'),
+    t('Free'),
     t('[add_to_cart_form]'),
     t('All'),
     t('Block'),
@@ -167,6 +181,19 @@ function shop_cbf_views_default_views() {
   $handler->display->display_options['fields']['title']['exclude'] = TRUE;
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['title']['link_to_product'] = 0;
+  /* Field: Commerce Product: Price */
+  $handler->display->display_options['fields']['commerce_price']['id'] = 'commerce_price';
+  $handler->display->display_options['fields']['commerce_price']['table'] = 'field_data_commerce_price';
+  $handler->display->display_options['fields']['commerce_price']['field'] = 'commerce_price';
+  $handler->display->display_options['fields']['commerce_price']['label'] = '';
+  $handler->display->display_options['fields']['commerce_price']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['commerce_price']['empty'] = 'Free';
+  $handler->display->display_options['fields']['commerce_price']['hide_empty'] = TRUE;
+  $handler->display->display_options['fields']['commerce_price']['empty_zero'] = TRUE;
+  $handler->display->display_options['fields']['commerce_price']['click_sort_column'] = 'amount';
+  $handler->display->display_options['fields']['commerce_price']['settings'] = array(
+    'calculation' => 'calculated_sell_price',
+  );
   /* Field: Field: Subtitle */
   $handler->display->display_options['fields']['field_subtitle']['id'] = 'field_subtitle';
   $handler->display->display_options['fields']['field_subtitle']['table'] = 'field_data_field_subtitle';
@@ -241,6 +268,7 @@ function shop_cbf_views_default_views() {
     t('Sort by'),
     t('Asc'),
     t('Desc'),
+    t('Free'),
     t('[add_to_cart_form]'),
     t('All'),
     t('Page'),
